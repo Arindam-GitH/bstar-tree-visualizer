@@ -28,9 +28,9 @@ A comprehensive interactive web application that demonstrates the internal worki
 
 ## 🚀 Live Demo
 
-**[View Live Demo](https://your-username.github.io/bstar-tree-visualizer)**
+**[View Live Demo](https://arindam-gith.github.io/bstar-tree-visualizer)**
 
-*Replace with your actual GitHub Pages or Vercel deployment URL*
+*Live demo will be available once GitHub Pages is enabled*
 
 ## 📸 Screenshots
 
@@ -61,7 +61,7 @@ A comprehensive interactive web application that demonstrates the internal worki
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/bstar-tree-visualizer.git
+   git clone https://github.com/Arindam-GitH/bstar-tree-visualizer.git
    cd bstar-tree-visualizer
    ```
 
@@ -194,7 +194,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **[Your Name]** - *Initial work* - [@your-username](https://github.com/your-username)
+- **Arindam Guha** - *Initial work* - [@Arindam-GitH](https://github.com/Arindam-GitH)
 - **[Group Member 2]** - *Contributor* - [@member2-username](https://github.com/member2-username)
 - **[Group Member 3]** - *Contributor* - [@member3-username](https://github.com/member3-username)
 
