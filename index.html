@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Theme Toggle -->
     <div class="theme-toggle" onclick="toggleTheme()">
@@ -42,7 +44,7 @@
                 <label for="bookAuthor">Author</label>
                 <input type="text" id="bookAuthor" placeholder="Enter Author Name">
             </div>
-            
+
             <div class="button-group">
                 <button class="btn btn-primary" onclick="insertBook()" title="Insert a new book record">
                     <i class="fas fa-plus"></i> Insert Book
@@ -62,7 +64,8 @@
                 <button class="btn btn-secondary" onclick="showAbout()" title="Learn about B★-Trees">
                     <i class="fas fa-info-circle"></i> About B★-Trees
                 </button>
-                <button class="btn btn-secondary" onclick="explainLastOperation()" title="Explain the last operation performed">
+                <button class="btn btn-secondary" onclick="explainLastOperation()"
+                    title="Explain the last operation performed">
                     <i class="fas fa-lightbulb"></i> Explain Operation
                 </button>
             </div>
@@ -117,8 +120,10 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>About B★-Trees</h2>
-            <p>A B★-Tree (B-Star Tree) is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.</p>
-            <p>Unlike regular B-Trees, B★-Trees ensure that all nodes (except the root) are at least 2/3 full, providing better space utilization and performance.</p>
+            <p>A B★-Tree (B-Star Tree) is a self-balancing tree data structure that maintains sorted data and allows
+                searches, sequential access, insertions, and deletions in logarithmic time.</p>
+            <p>Unlike regular B-Trees, B★-Trees ensure that all nodes (except the root) are at least 2/3 full, providing
+                better space utilization and performance.</p>
             <p>In our library system, Book IDs serve as keys to efficiently organize and retrieve book records.</p>
         </div>
     </div>
@@ -131,4 +136,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
