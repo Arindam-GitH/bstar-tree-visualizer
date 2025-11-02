@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B★-Tree Visualizer and Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="main-title">
+                <span class="b-star">B★</span>-Tree Visualizer and Library Management System
+            </h1>
+            <p class="subtitle">Implemented in C — Data Structures Project</p>
+        </div>
+        <div class="header-animation"></div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Left Panel - Controls -->
+        <div class="panel left-panel">
+            <h3><i class="fas fa-cogs"></i> Controls</h3>
+            <div class="input-group">
+                <label for="bookId">Book ID</label>
+                <input type="number" id="bookId" placeholder="Enter Book ID" min="1">
+            </div>
+            <div class="input-group">
+                <label for="bookTitle">Book Title</label>
+                <input type="text" id="bookTitle" placeholder="Enter Book Title">
+            </div>
+            <div class="input-group">
+                <label for="bookAuthor">Author</label>
+                <input type="text" id="bookAuthor" placeholder="Enter Author Name">
+            </div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="insertBook()" title="Insert a new book record">
+                    <i class="fas fa-plus"></i> Insert Book
+                </button>
+                <button class="btn btn-danger" onclick="deleteBook()" title="Delete a book from the library">
+                    <i class="fas fa-trash"></i> Delete Book
+                </button>
+                <button class="btn btn-info" onclick="searchBook()" title="Search for a book in the library">
+                    <i class="fas fa-search"></i> Search Book
+                </button>
+                <button class="btn btn-warning" onclick="resetTree()" title="Clear all books and reset the tree">
+                    <i class="fas fa-refresh"></i> Reset Tree
+                </button>
+            </div>
+
+            <div class="info-section">
+                <button class="btn btn-secondary" onclick="showAbout()" title="Learn about B★-Trees">
+                    <i class="fas fa-info-circle"></i> About B★-Trees
+                </button>
+                <button class="btn btn-secondary" onclick="explainLastOperation()" title="Explain the last operation performed">
+                    <i class="fas fa-lightbulb"></i> Explain Operation
+                </button>
+            </div>
+        </div>
+
+        <!-- Center Panel - Visualization -->
+        <div class="panel center-panel">
+            <h3><i class="fas fa-sitemap"></i> B★-Tree Structure</h3>
+            <div class="tree-container" id="treeContainer">
+                <div class="tree-placeholder">
+                    <i class="fas fa-tree"></i>
+                    <p>Tree is empty. Insert a book to start!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Console -->
+        <div class="panel right-panel">
+            <h3><i class="fas fa-terminal"></i> Operation Console</h3>
+            <div class="console" id="console">
+                <div class="console-message welcome">
+                    <i class="fas fa-rocket"></i>
+                    <span>Welcome to B★-Tree Visualizer! Start by inserting your first book.</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Library Records Table -->
+    <section class="records-section">
+        <h3><i class="fas fa-table"></i> Library Records</h3>
+        <div class="table-container">
+            <table id="libraryTable">
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr class="empty-row">
+                        <td colspan="3">No books in the library yet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- About Modal -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>About B★-Trees</h2>
+            <p>A B★-Tree (B-Star Tree) is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.</p>
+            <p>Unlike regular B-Trees, B★-Trees ensure that all nodes (except the root) are at least 2/3 full, providing better space utilization and performance.</p>
+            <p>In our library system, Book IDs serve as keys to efficiently organize and retrieve book records.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Developed by <strong>[Your Group Name]</strong> — B.Tech CSE — Data Structures Project</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
