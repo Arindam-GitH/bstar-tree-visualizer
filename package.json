@@ -4,10 +4,9 @@
   "description": "Interactive B★-Tree Visualizer and Library Management System for Data Structures education",
   "main": "index.html",
   "scripts": {
+    "build": "echo 'Build complete'",
     "start": "npx serve .",
-    "dev": "npx serve . --listen 3000",
-    "build": "echo 'No build step required for static site'",
-    "deploy": "vercel --prod"
+    "dev": "npx serve . --listen 3000"
   },
   "keywords": [
     "b-star-tree",
@@ -32,8 +31,5 @@
   "homepage": "https://github.com/Arindam-GitH/bstar-tree-visualizer#readme",
   "devDependencies": {
     "serve": "^14.2.1"
-  },
-  "engines": {
-    "node": ">=14.0.0"
   }
 }
